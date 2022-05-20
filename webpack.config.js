@@ -12,6 +12,7 @@ module.exports = {
   devServer: {                 // new line
     contentBase: './dist'      // new line
   },
+  stats: { children: false },
   plugins: [
     new CleanWebpackPlugin(), // new line
     new HtmlWebpackPlugin({
