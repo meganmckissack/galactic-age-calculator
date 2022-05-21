@@ -2,6 +2,7 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
+import { GalacticAge } from './galacticAge';
 
 
 $(document).ready(function() {
@@ -13,5 +14,10 @@ $(document).ready(function() {
       const healthInput = $(this).val();
       healthIndicators.push(healthInput);
     });
+
+    let myGalacticAge = new GalacticAge(42, 30, 45, 34, 50, healthIndicators, 20);
+    let healthScoreResult = myGalacticAge.calculateHealthScore();
+
+    $(".healthScore").html(healthScoreResult);
   });
 });
