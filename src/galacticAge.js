@@ -1,11 +1,10 @@
 export class GalacticAge {
-  constructor(earthAge, mercuryAge, venusAge, marsAge, jupiterAge, healthScore = [], lifeExpectancy) {
+  constructor(earthAge, mercuryAge, venusAge, marsAge, jupiterAge, lifeExpectancy) {
     this.earthAge = earthAge;
     this.mercuryAge = mercuryAge;
     this.venusAge = venusAge;
     this.marsAge = marsAge;
     this.jupiterAge = jupiterAge;
-    this.healthScore = healthScore;
     this.lifeExpectancy = lifeExpectancy;
   }
 
@@ -23,5 +22,14 @@ export class GalacticAge {
 
   calculateJupiterAge() {
     return Math.round(this.earthAge / 11.86);
-  } 
+  }
+
+  calculateLifeExpectancy() {
+    const avgLifeExpectancy = 79;
+    this.mercuryExpectancy = Math.round((avgLifeExpectancy - this.earthAge) / .24);
+    this.venusExpectancy = Math.round((avgLifeExpectancy - this.earthAge) / .62);
+    this.marsExpectancy = Math.round((avgLifeExpectancy - this.earthAge) / 1.88);
+    this.jupiterExpectancy = Math.round((avgLifeExpectancy - this.earthAge) / 11.86);
+
+  }
 }

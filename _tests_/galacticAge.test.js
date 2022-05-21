@@ -6,15 +6,13 @@ describe('GalacticAge', () => {
     myGalacticAge = new GalacticAge(42,175,68,22,4,50,100);
   });
 
-  test('it should create a galactic age class that has 7 age properties', () => {
+  test('it should create a galactic age class that has 5 age properties', () => {
 
     expect(myGalacticAge.earthAge).toEqual(42);
     expect(myGalacticAge.mercuryAge).toEqual(175);
     expect(myGalacticAge.venusAge).toEqual(68);
     expect(myGalacticAge.marsAge).toEqual(22);
     expect(myGalacticAge.jupiterAge).toEqual(4);
-    expect(myGalacticAge.healthScore).toEqual(50);
-    expect(myGalacticAge.lifeExpectancy).toEqual(100);
   });
 
   test('should calculate age in Mercury years based on Earth age', () => {
@@ -38,10 +36,10 @@ describe('GalacticAge', () => {
   });
 
   test('should calculate life expectancy on each planet', () => {
-    myGalacticAge.calculatLifeExpectancy();
-    expect(myGalacticAge.mercuryExpectancy).toEqual(50);
-    expect(myGalacticAge.venusExpectancy).toEqual(50);
-    expect(myGalacticAge.marsExpectancy).toEqual(50);
-    expect(myGalacticAge.jupiterExpectancy).toEqual(50);
+    myGalacticAge.calculateLifeExpectancy();
+    expect(myGalacticAge.mercuryExpectancy).toEqual(154);
+    expect(myGalacticAge.venusExpectancy).toEqual(60);
+    expect(myGalacticAge.marsExpectancy).toEqual(20);
+    expect(myGalacticAge.jupiterExpectancy).toEqual(3);
   });
 });
