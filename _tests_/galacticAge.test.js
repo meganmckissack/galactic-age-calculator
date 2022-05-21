@@ -1,9 +1,12 @@
 import { GalacticAge } from "../src/galacticAge.js";
 
 describe('GalacticAge', () => {
+  let myGalacticAge;
+  beforeEach(() => {
+    myGalacticAge = new GalacticAge(42,175,68,22,4,100);
+  });
 
   test('it should create a galactic age class that has 6 age properties', () => {
-    let myGalacticAge = new GalacticAge(42,175,68,22,4,100);
 
     expect(myGalacticAge.earthAge).toEqual(42);
     expect(myGalacticAge.mercuryAge).toEqual(175);
@@ -12,4 +15,6 @@ describe('GalacticAge', () => {
     expect(myGalacticAge.jupiterAge).toEqual(4);
     expect(myGalacticAge.lifeExpectancy).toEqual(100);
   });
+
+
 });
