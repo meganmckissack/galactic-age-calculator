@@ -15,4 +15,8 @@ export class GalacticAge {
   calculateVenusAge() {
     return Math.round(this.earthAge / .62);
   }
+
+  calculateMarsAge() {
+    return Math.round(this.earthAge / 1.88);
+  }
 }
