@@ -1,5 +1,5 @@
 export class GalacticAge {
-  constructor(earthAge, mercuryAge, venusAge, marsAge, jupiterAge, healthScore, lifeExpectancy) {
+  constructor(earthAge, mercuryAge, venusAge, marsAge, jupiterAge, healthScore = [], lifeExpectancy) {
     this.earthAge = earthAge;
     this.mercuryAge = mercuryAge;
     this.venusAge = venusAge;
@@ -24,5 +24,5 @@ export class GalacticAge {
   calculateJupiterAge() {
     return Math.round(this.earthAge / 11.86);
   }
-
+    
 }
