@@ -37,5 +37,8 @@ describe('GalacticAge', () => {
     expect(myGalacticAge.jupiterAge).toEqual(4);
   });
 
-  
+  test('should calculate a health score base on use input', () => {
+    myGalacticAge.calculateHealthScore();
+    expect(myGalacticAge.healthScore).toEqual(50);
+  });
 });
