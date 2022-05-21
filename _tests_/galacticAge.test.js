@@ -37,8 +37,11 @@ describe('GalacticAge', () => {
     expect(myGalacticAge.jupiterAge).toEqual(4);
   });
 
-  test('should calculate a health score base on use input', () => {
-    myGalacticAge.calculateHealthScore();
-    expect(myGalacticAge.healthScore).toEqual(50);
+  test('should calculate life expectancy on each planet', () => {
+    myGalacticAge.calculatLifeExpectancy();
+    expect(myGalacticAge.mercuryExpectancy).toEqual(50);
+    expect(myGalacticAge.venusExpectancy).toEqual(50);
+    expect(myGalacticAge.marsExpectancy).toEqual(50);
+    expect(myGalacticAge.jupiterExpectancy).toEqual(50);
   });
 });

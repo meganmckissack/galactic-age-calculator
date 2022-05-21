@@ -23,6 +23,5 @@ export class GalacticAge {
 
   calculateJupiterAge() {
     return Math.round(this.earthAge / 11.86);
-  }
-    
+  } 
 }
