@@ -22,8 +22,8 @@ describe('GalacticAge', () => {
   });
 
   test('should calculate age in Venus years based on Earth age', () => {
-    myGalacticAge.calculateMercuryAge(42);
-    expect(myGalacticAge.mercuryAge).toEqual(68);
+    myGalacticAge.calculateVenusAge(42);
+    expect(myGalacticAge.venusAge).toEqual(68);
   });
 
 });
