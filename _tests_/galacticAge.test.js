@@ -16,5 +16,9 @@ describe('GalacticAge', () => {
     expect(myGalacticAge.lifeExpectancy).toEqual(100);
   });
 
+  test('should calculate age in Mercury years based on Earth age', () => {
+    myGalacticAge.calculateMercuryAge(42);
+    expect(myGalacticAge.mercuryAge).toEqual(175);
+  });
 
 });
