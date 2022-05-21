@@ -26,4 +26,9 @@ describe('GalacticAge', () => {
     expect(myGalacticAge.venusAge).toEqual(68);
   });
 
+  test('should calculate age in Mars years based on Earth age', () => {
+    myGalacticAge.calculateMarsAge(42);
+    expect(myGalacticAge.marsAge).toEqual(22);
+  });
+
 });
