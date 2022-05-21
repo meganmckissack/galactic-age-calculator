@@ -6,18 +6,25 @@ import { GalacticAge } from './galacticAge';
 
 
 $(document).ready(function() {
-  $("form#life-expectancy").submit(function(event) {
+  $("form#galactic-age").submit(function(event) {
     event.preventDefault();
+    const userAge = parseInt(document.getElementById("user-age-input").value);
+    let myGalacticAge = new GalacticAge(userAge);
 
-    let healthIndicators = [];
-    $("input:checkbox[name=life-expectancy-input]:checked").each(function() {
-      const healthInput = $(this).val();
-      healthIndicators.push(healthInput);
-    });
 
-    let myGalacticAge = new GalacticAge(42, 30, 45, 34, 50, healthIndicators, 20);
-    let healthScoreResult = myGalacticAge.calculateHealthScore();
+    const userMercuryAge = myGalacticAge.calculateMercuryAge();
+    const userVenusAge = myGalacticAge.calculateVenusAge();
+    const userMarsAge = myGalacticAge.calculateMarsAge();
+    const userJupiterAge = myGalacticAge.calculateJupiterAge();
+    const userLifeExpectancy = myGalacticAge.calculateLifeExpectancy();
+    console.log(myGalacticAge);
+    
+    $(".ageResult").show();
+    $("#mercury-results").append("<p>"+ userMercuryAge + "</p>");
+    $("#venus-results").html(userVenusAge);
+    $("#mars-results").html(userMarsAge);
+    $("#jupiter-results").html(userJupiterAge);
+    $("#life-expectancy-results").html(userLifeExpectancy);
 
-    $(".healthScore").html(healthScoreResult);
   });
 });
