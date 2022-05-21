@@ -31,4 +31,9 @@ describe('GalacticAge', () => {
     expect(myGalacticAge.marsAge).toEqual(22);
   });
 
+  test('should calculate age in Jupiter years based on Earth age', () => {
+    myGalacticAge.calculateJupiterAge(42);
+    expect(myGalacticAge.jupiterAge).toEqual(4);
+  });
+
 });
