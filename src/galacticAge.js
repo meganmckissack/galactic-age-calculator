@@ -9,19 +9,19 @@ export class GalacticAge {
   }
 
   calculateMercuryAge() {
-    return Math.round(this.earthAge / .24);
+    this.mercuryAge = Math.round(this.earthAge / .24);
   }
 
   calculateVenusAge() {
-    return Math.round(this.earthAge / .62);
+    this.venusAge = Math.round(this.earthAge / .62);
   }
 
   calculateMarsAge() {
-    return Math.round(this.earthAge / 1.88);
+    this.marsAge = Math.round(this.earthAge / 1.88);
   }
 
   calculateJupiterAge() {
-    return Math.round(this.earthAge / 11.86);
+    this.calculateJupiterAge = Math.round(this.earthAge / 11.86);
   }
 
   calculateLifeExpectancy() {
