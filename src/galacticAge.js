@@ -7,4 +7,9 @@ export class GalacticAge {
     this.jupiterAge = jupiterAge;
     this.lifeExpectancy = lifeExpectancy;
   }
+
+  calculateMercuryAge() {
+    return Math.round(this.earthAge / .24);
+  }
+
 }
