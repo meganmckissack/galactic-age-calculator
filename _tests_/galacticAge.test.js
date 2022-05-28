@@ -42,4 +42,13 @@ describe('GalacticAge', () => {
     expect(myGalacticAge.marsExpectancy).toEqual(20);
     expect(myGalacticAge.jupiterExpectancy).toEqual(3);
   });
+
+  test('should return number of years past life expectancy of a planet as a positive number', () => {
+    let myGalacticAge2 = new GalacticAge(85);
+    myGalacticAge2.calculateLifeExpectancy();
+    expect(myGalacticAge2.mercuryExpectancy).toEqual(25);
+    expect(myGalacticAge2.venusExpectancy).toEqual(10);
+    expect(myGalacticAge2.marsExpectancy).toEqual(3);
+    expect(myGalacticAge2.jupiterExpectancy).toEqual(1);
+  });
 });
